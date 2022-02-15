@@ -1,0 +1,28 @@
+- name: APT
+  become: yes
+  ansible.builtin.apt:
+    name: "{{ item.value }}"
+    state: latest
+  loop: "{{ apt_packages | dict2items }}"
+
+- name: PIP3
+  become: yes
+  ansible.builtin.pip:
+    name: "{{ item.value }}"
+    state: latest
+  loop: "{{ pip3_packages | dict2items }}"
+
+- name: NPM
+  become: yes
+  community.general.npm:
+    global: yes
+    name: "{{ item.value }}"
+    state: latest
+  loop: "{{ npm_packages | dict2items }}"
+
+- name: GEM
+  become: yes
+  community.general.gem:
+    name: "{{ item.value }}"
+    state: latest
+  loop: "{{ gem_packages | dict2items }}"

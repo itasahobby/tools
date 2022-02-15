@@ -1,0 +1,10 @@
+---
+- name: "tools"
+  hosts: localhost
+  pre_tasks:
+    - name: Load variable files.
+      include_vars: "{{ item }}"
+      loop:
+        - "vars/tools.yml"
+  tasks:
+    - import_tasks: tasks/generic.yml

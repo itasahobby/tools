@@ -1,0 +1,80 @@
+apt_packages:
+  generic:
+    - tmux
+    - git
+    - mlocate
+    - liberror-perl
+    - libffi-dev
+    - libssl-dev
+    - zip
+    - curl
+    - golang
+    - cargo
+    - npm
+    - python3-pip
+    - ipython3
+    - openvpn
+    - libreoffice
+  misc:
+    - john
+    - hashcat
+    - nmap
+  web:
+    - ffuf
+    - sqlmap
+  reversing:
+    - gdb
+    - binwalk
+  pwn:
+    - checksec
+  forensics:
+    - audacity
+    - foremost
+    - wireshark
+  stego:
+    - exiftool
+    - imagemagick
+    - steghide
+    - foremost
+
+pip3_packages:
+  generic:
+    - git+https://github.com/SecureAuthCorp/impacket.git
+    - git+https://github.com/calebstewart/pwncat.git
+  reversing:
+    - git+https://github.com/decalage2/oletools.git
+  crypto:
+    - xortool
+  pwn:
+    - git+https://github.com/hellman/libformatstr.git
+    - ROPgadget
+    - pwntools
+  forensics:
+    - git+https://github.com/volatilityfoundation/volatility3.git
+    - androguard
+
+npm_packages:
+  crypto:
+    padding-oracle-attacker
+
+gem_packages:
+  pwn:
+    - one_gadget
+
+go_packages:
+  web:
+    - github.com/KathanP19/protoscan
+    - github.com/hahwul/dalfox/v2
+    - github.com/projectdiscovery/nuclei/v2/cmd/nuclei
+    - github.com/projectdiscovery/subfinder/v2/cmd/subfinder
+    - github.com/projectdiscovery/httpx/cmd/httpx
+    - github.com/projectdiscovery/dnsx/cmd/dnsx
+    - github.com/tomnomnom/assetfinder
+    - github.com/tomnomnom/waybackurls
+    - github.com/tomnomnom/qsreplace
+
+http_packages:
+  stego:
+    - http://www.caesum.com/handbook/Stegsolve.jar
+
+pip2_url: https://bootstrap.pypa.io/pip/2.7/get-pip.py
