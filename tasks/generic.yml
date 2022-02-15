@@ -19,10 +19,3 @@
     name: "{{ item.value }}"
     state: latest
   loop: "{{ npm_packages | dict2items }}"
-
-- name: GEM
-  become: yes
-  community.general.gem:
-    name: "{{ item.value }}"
-    state: latest
-  loop: "{{ gem_packages | dict2items }}"
